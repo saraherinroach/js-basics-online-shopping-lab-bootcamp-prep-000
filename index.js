@@ -19,12 +19,11 @@ function viewCart() {
   if (cart.length === 0) {
     return "Your shopping cart is empty."
   } else if (cart.length === 1) {
-     var oneItemMessage = `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`
-    return oneItemMessage
+    return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`
   } else if (cart.length > 1) {
      var countdown = cart.length;
      var number = 0;
-     var message = ["In your cart, you have"];
+     var message = "In your cart, you have";
      while (countdown > 1) {
        message = `${message} ${cart[number].itemName} at $${cart[number].itemPrice},`;
        number++;
